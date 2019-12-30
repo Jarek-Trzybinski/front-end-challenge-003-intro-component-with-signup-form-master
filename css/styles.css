@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #ff7a7b;
+  color: whit; }
+
+main {
+  border: white 1px dashed; }
+
+.text {
+  border: yellow 1px dashed; }
+
+.form {
+  border: yellow 1px dashed; }
+
+@media screen and (max-width: 600px) {
+  main {
+    display: block;
+    padding: 11%; } }
+
+@media screen and (min-width: 600px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 11%; } }
