@@ -1,25 +1,96 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap);
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Poppins, sans-serif;
+  font-weight: 400; }
 
 body {
-  background-color: #ff7a7b;
-  color: whit; }
+  background-color: #ff7a7a;
+  color: white; }
 
-main {
-  border: white 1px dashed; }
+h1 {
+  font-size: 1.7rem;
+  font-weight: 700; }
 
-.text {
-  border: yellow 1px dashed; }
+p {
+  line-height: 1.7rem; }
+
+.text > h1:first-child {
+  margin-top: 4rem;
+  margin-bottom: 1rem; }
+
+.text p {
+  margin-bottom: 4rem; }
 
 .form {
   border: yellow 1px dashed; }
 
+.button {
+  border-radius: 8px;
+  width: 100%;
+  border: 0; }
+
+.first-button {
+  padding: 1.3rem 4rem;
+  margin-bottom: 1.4rem;
+  background: #6055a5;
+  color: white;
+  box-shadow: 0px 7px 1px rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem; }
+
+.first-button span {
+  font-weight: 700;
+  font-size: 1rem; }
+
+.second-button {
+  padding: 0.9rem 1rem;
+  font-size: 0.9rem;
+  background: #38cc8c;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 1px #31bf81;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase; }
+
+form {
+  padding: 1.4rem;
+  background: white;
+  border-radius: 7px; }
+
+form p {
+  color: #b9b6d3;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0 1rem;
+  line-height: 2em;
+  margin: 0; }
+
+form span {
+  color: #ff7a7a;
+  font-size: 0.7rem;
+  font-weight: 700; }
+
+input {
+  color: #b9b6d3;
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  padding: 0.7rem 1.5rem;
+  border-radius: 7px;
+  border: 1px #b9b6d3 solid; }
+
 @media screen and (max-width: 600px) {
+  body {
+    background: url(./../images/bg-intro-mobile.png) #ff7a7a;
+    background-size: cover; }
   main {
     display: block;
-    padding: 11%; } }
+    padding: 7%;
+    text-align: center; } }
 
 @media screen and (min-width: 600px) {
   main {
