@@ -79,7 +79,7 @@ input
     border-radius: 7px
     border: 1px $grayish-blue solid
 // Mobile screeen only
-@media screen and (max-width: 600px)
+@media screen and (max-width: 850px)
     body
         background: url(./../images/bg-intro-mobile.png)  $red
         background-size: cover
@@ -89,7 +89,7 @@ input
         text-align: center
 
 // Desktop screen only
-@media screen and (min-width: 600px)
+@media screen and (min-width: 850px)
     main
         display: grid
         grid-template-columns: 1fr 1fr
@@ -102,11 +102,13 @@ input
     .text h1
         font-size: 3rem
         line-height: 1.2em
-        padding: 0
-        margin: 0
-        margin-top: 4rem
         margin-bottom: 30px
     .text p
         margin: 0
+    .form
+        display: flex
+        flex-direction: column
+        justify-content: center
     form
         text-align: center
+        padding: 2.5rem
