@@ -26,13 +26,11 @@ h1
 p
     line-height: 1.7rem
 
-.text > h1:first-child
+.text h1
     margin-top: 4rem
     margin-bottom: 1rem
 .text p
     margin-bottom: 4rem
-.form
-    border: yellow 1px dashed
 .button
     border-radius: 8px
     width: 100%
@@ -87,7 +85,7 @@ input
         background-size: cover
     main
         display: block
-        padding: 7%
+        padding: 6.5%
         text-align: center
 
 // Desktop screen only
@@ -95,4 +93,20 @@ input
     main
         display: grid
         grid-template-columns: 1fr 1fr
-        padding: 11%
+        padding: 9.5%
+    .text
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 3rem
+    .text h1
+        font-size: 3rem
+        line-height: 1.2em
+        padding: 0
+        margin: 0
+        margin-top: 4rem
+        margin-bottom: 30px
+    .text p
+        margin: 0
+    form
+        text-align: center
