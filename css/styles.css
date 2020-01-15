@@ -57,6 +57,18 @@ form {
   background: white;
   border-radius: 7px; }
 
+form small {
+  color: red;
+  display: none; }
+
+.input-containter {
+  margin-bottom: 10px; }
+
+.input-container.invalid {
+  margin-bottom: 13px; }
+  .input-container.invalid small {
+    display: contents; }
+
 form p {
   color: #b9b6d3;
   font-size: 0.7rem;
@@ -78,7 +90,15 @@ input {
   margin-bottom: 15px;
   padding: 0.7rem 1.5rem;
   border-radius: 7px;
-  border: 1px #b9b6d3 solid; }
+  border: 1px #b9b6d3 solid;
+  outline: none; }
+
+.invalid input {
+  border: 2px solid #ff7a7a;
+  background: url(./../images/icon-error.svg);
+  background-position: right 15px center;
+  background-repeat: no-repeat;
+  margin-bottom: 0px; }
 
 @media screen and (max-width: 850px) {
   body {
@@ -109,7 +129,7 @@ input {
     margin-bottom: 30px; }
   .text p {
     margin: 0; }
-  .form {
+  .form-container {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;

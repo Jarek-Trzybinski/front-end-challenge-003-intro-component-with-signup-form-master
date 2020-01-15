@@ -58,6 +58,17 @@ form
     padding: 1.4rem
     background: white
     border-radius: 7px
+form 
+    small
+        color: red
+        display: none
+.input-containter
+    margin-bottom: 10px
+
+.input-container.invalid
+    margin-bottom: 13px
+    small
+        display: contents
 form p
     color: $grayish-blue
     font-size: 0.7rem 
@@ -78,6 +89,16 @@ input
     padding: 0.7rem 1.5rem
     border-radius: 7px
     border: 1px $grayish-blue solid
+    outline: none
+
+//Active states
+.invalid input
+    border: 2px solid $red
+    background: url(./../images/icon-error.svg)
+    background-position: right 15px center
+    background-repeat: no-repeat
+    margin-bottom: 0px
+
 // Mobile screeen only
 @media screen and (max-width: 850px)
     body
@@ -105,7 +126,7 @@ input
         margin-bottom: 30px
     .text p
         margin: 0
-    .form
+    .form-container
         display: flex
         flex-direction: column
         justify-content: center
