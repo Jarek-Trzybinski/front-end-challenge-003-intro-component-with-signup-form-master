@@ -25,10 +25,20 @@ p {
 .text p {
   margin-bottom: 4rem; }
 
+.form-container {
+  box-shadow: 0px 7px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 7px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column; }
+
 .button {
   border-radius: 8px;
   width: 100%;
-  border: 0; }
+  border: 0;
+  outline: none; }
 
 .first-button {
   padding: 1.3rem 4rem;
@@ -45,12 +55,15 @@ p {
 .second-button {
   padding: 0.9rem 1rem;
   font-size: 0.9rem;
-  background: #38cc8c;
+  background: #31bf81;
   margin-bottom: 15px;
   box-shadow: 0px 4px 1px #31bf81;
   color: white;
   font-weight: 600;
   text-transform: uppercase; }
+
+.second-button:hover {
+  background: #38cc8c; }
 
 form {
   padding: 1.4rem;
@@ -58,16 +71,20 @@ form {
   border-radius: 7px; }
 
 form small {
-  color: red;
+  color: #ff7a7a;
   display: none; }
 
 .input-containter {
   margin-bottom: 10px; }
 
 .input-container.invalid {
-  margin-bottom: 13px; }
-  .input-container.invalid small {
-    display: contents; }
+  margin-bottom: 13px;
+  text-align: right; }
+
+.input-container.invalid small {
+  display: contents;
+  font-style: italic;
+  font-size: 0.8rem; }
 
 form p {
   color: #b9b6d3;
@@ -88,17 +105,39 @@ input {
   font-size: 0.9rem;
   font-weight: 700;
   margin-bottom: 15px;
-  padding: 0.7rem 1.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 7px;
   border: 1px #b9b6d3 solid;
-  outline: none; }
+  outline: none;
+  color: #3e3c49; }
+
+input:focus {
+  color: #3e3c49;
+  outline: none;
+  border: 1px #3e3c49 solid; }
+
+input::-webkit-input-placeholder {
+  color: #b9b6d3; }
+
+input::-moz-placeholder {
+  color: #b9b6d3; }
+
+input:-ms-input-placeholder {
+  color: #b9b6d3; }
+
+input::-ms-input-placeholder {
+  color: #b9b6d3; }
+
+input::placeholder {
+  color: #b9b6d3; }
 
 .invalid input {
   border: 2px solid #ff7a7a;
   background: url(./../images/icon-error.svg);
   background-position: right 15px center;
   background-repeat: no-repeat;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  color: red; }
 
 @media screen and (max-width: 850px) {
   body {
@@ -110,6 +149,9 @@ input {
     text-align: center; } }
 
 @media screen and (min-width: 850px) {
+  body {
+    background: url(./../images/bg-intro-desktop.png) #ff7a7a;
+    background-size: cover; }
   main {
     display: grid;
     grid-template-columns: 1fr 1fr;

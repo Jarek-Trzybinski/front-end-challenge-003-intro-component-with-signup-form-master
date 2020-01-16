@@ -20,7 +20,7 @@ form.addEventListener('submit', e => {
         setSuccess(lastName);
     }
     if (email.value === '') {
-        setError(email, 'Second Name cannot be empty');
+        setError(email, 'Email cannot be empty');
     } else if(isEmail(email.value) === false) {
         setError(email, 'Looks like this is not an email');
     } 
@@ -40,6 +40,7 @@ function setError(input, message) {
     const inputContainer = input.parentElement;
     const small = inputContainer.querySelector('small');
     inputContainer.className = 'input-container invalid';
+    input.placeholder = '';
     small.innerText = message;
 }
 function setSuccess(input) {
@@ -51,5 +52,5 @@ function isEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     return re.test(email); 
-
 }
+
